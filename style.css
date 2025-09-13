@@ -8,16 +8,29 @@ body {
 }
 
 header {
-    background-color: #333;
-    padding: 20px;
+    /* Remove padding from the main header and make it a flex container */
+    background-color: transparent; /* Make the background transparent */
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
 }
 
-main {
-    padding: 20px;
+.header-container {
+    background-color: #333;
+    padding: 10px 40px; /* Add padding inside the rounded bar */
+    border-radius: 25px; /* Adjust this value to change the roundness */
+    box-shadow: 0 0 10px 5px #39ff14; /* Add the neon green glow */
+    /* Add multiple shadows for a more intense, layered glow */
+    /* box-shadow: 0 0 10px 5px #39ff14, 0 0 20px 10px #39ff14; */
 }
 
 h1 {
     color: #fff;
+    margin: 0; /* Remove the default margin on the h1 element */
+}
+
+main {
+    padding: 20px;
 }
 
 #game-list {
