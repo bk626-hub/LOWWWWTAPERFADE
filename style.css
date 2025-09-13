@@ -19,105 +19,72 @@ body {
     transform: translateX(-50%);
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out; /* Increased transition duration for a smoother effect */
 }
 
 /* Collapsed state (default) */
 .island-collapsed {
     width: 200px;
     height: 40px;
+    padding: 0 20px;
 }
 
 /* Expanded state */
 .island-expanded {
-    width: 350px;
-    height: 100px;
+    width: 800px; /* Made longer as requested */
+    height: 60px;
     border-radius: 20px;
+    padding: 0 30px;
 }
 
 .island-content {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 0 15px;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease-in-out;
+    height: 100%;
 }
 
 /* Show content for the active state */
 .island-collapsed .island-small {
     opacity: 1;
     visibility: visible;
-    height: 100%;
+    justify-content: center; /* Center the title when collapsed */
 }
 
 .island-expanded .island-large {
     opacity: 1;
     visibility: visible;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
 
 /* Small content styling */
-.island-small {
-    display: flex;
-    gap: 10px;
+.island-small .title {
+    font-weight: bold;
+    font-size: 16px;
 }
 
 /* Large content styling */
-.island-large {
-    text-align: left;
-    padding: 10px 20px;
-}
-
-.large-content-top {
+.island-large .large-content-row {
     display: flex;
     align-items: center;
-    width: 100%;
     justify-content: space-between;
+    width: 100%;
 }
 
-.track-info {
-    flex-grow: 1;
-    margin-left: 15px;
-}
-
-.track-title {
-    font-size: 16px;
+.island-large .title {
     font-weight: bold;
-    margin: 0;
-}
-
-.track-artist {
-    font-size: 12px;
-    color: #bbb;
-    margin: 0;
-}
-
-.controls button {
-    background: transparent;
-    border: none;
-    color: #fff;
     font-size: 20px;
-    cursor: pointer;
 }
 
-.large-content-bottom {
-    width: 100%;
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px; /* Spacing between links */
+    font-size: 16px;
+    transition: color 0.2s ease-in-out;
 }
 
-.progress-bar {
-    width: 100%;
-    height: 3px;
-    background-color: #333;
-    border-radius: 2px;
-}
-
-.progress-fill {
-    height: 100%;
-    width: 50%; /* Example: 50% progress */
-    background-color: #fff;
-    border-radius: 2px;
+.nav-links a:hover {
+    color: #00bfff; /* Highlight links on hover */
 }
