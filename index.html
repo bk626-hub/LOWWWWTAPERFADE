@@ -3,24 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uranium</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Impact - Unblocked Games</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">Uranium</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#games">Games</a></li>
-            <li><a href="#chat">Chat</a></li>
-            <li><a href="#settings">Settings/More</a></li>
-        </ul>
-    </div>
+    <header class="site-header">
+        <h1 class="logo">Impact</h1>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="content">
-        <h1>Welcome to Uranium</h1>
-        <p>This is where your main content will go.</p>
-    </div>
+    <main class="container">
+        <section class="hero-section">
+            <h2 class="hero-title">Your Gateway to Unblocked Games</h2>
+            <p class="hero-subtitle">Play your favorite games, anywhere, anytime.</p>
+        </section>
+
+        <section id="games" class="games-section">
+            <h2 class="section-title">Featured Games</h2>
+            <div id="game-list" class="game-grid">
+                <!-- Games will be loaded here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Impact. All rights reserved.</p>
+    </footer>
+
+    <script src="games.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
