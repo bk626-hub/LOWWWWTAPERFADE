@@ -1,28 +1,123 @@
-/* Basic reset to remove default browser spacing */
 body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
     margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #222; /* Dark background color for the page */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-.title-bar {
-    /* Set the background color and text color for the bar */
-    background-color: #333;
+#dynamic-island {
+    background-color: #000;
+    border-radius: 30px;
     color: #fff;
-    
-    /* Add padding to create spacing inside the bar */
-    padding: 60px;
-    
-    /* Ensure the title bar spans the full width of the screen */
-    width: 1000%;
-    
-    /* Align the text to the center */
-    text-align: left;
+    overflow: hidden;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
 }
 
-.title-bar h1 {
-    /* Remove the default margin on the heading */
+/* Collapsed state (default) */
+.island-collapsed {
+    width: 200px;
+    height: 40px;
+}
+
+/* Expanded state */
+.island-expanded {
+    width: 350px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+.island-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Show content for the active state */
+.island-collapsed .island-small {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+.island-expanded .island-large {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* Small content styling */
+.island-small {
+    display: flex;
+    gap: 10px;
+}
+
+/* Large content styling */
+.island-large {
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.large-content-top {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.track-info {
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+.track-title {
+    font-size: 16px;
+    font-weight: bold;
     margin: 0;
-    font-size: 1.8rem;
+}
+
+.track-artist {
+    font-size: 12px;
+    color: #bbb;
+    margin: 0;
+}
+
+.controls button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.large-content-bottom {
+    width: 100%;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 50%; /* Example: 50% progress */
+    background-color: #fff;
+    border-radius: 2px;
 }
