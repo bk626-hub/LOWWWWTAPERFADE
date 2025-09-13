@@ -8,7 +8,6 @@
 </head>
 <body>
     <header>
-        <!-- New div for the separated, glowing header -->
         <div class="header-container">
             <h1>🎮 Unblocked Games</h1>
         </div>
@@ -22,6 +21,9 @@
         </div>
         <div id="game-container" style="display:none;">
             <button id="back-button" onclick="goBack()">← Back</button>
+            <div id="loading-screen">
+                <p>Loading...</p>
+            </div>
             <iframe id="game-frame" frameborder="0"></iframe>
         </div>
     </main>
