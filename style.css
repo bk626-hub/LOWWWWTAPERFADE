@@ -12,13 +12,13 @@ body {
     color: #fff;
     
     /* Add padding to create spacing inside the bar */
-    padding: 20px;
+    padding: 60px;
     
     /* Ensure the title bar spans the full width of the screen */
     width: 1000%;
     
     /* Align the text to the center */
-    text-align: center;
+    text-align: left;
 }
 
 .title-bar h1 {
