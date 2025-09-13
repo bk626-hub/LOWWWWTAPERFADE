@@ -1,34 +1,28 @@
+/* Basic reset to remove default browser spacing */
 body {
-    background-color: #111;
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-}
-
-header {
-    /* Create space at the top of the page */
-    padding-top: 20px; 
-    /* Use flexbox to center the title bar horizontally */
-    display: flex;
-    justify-content: center;
+    background-color: #222; /* Dark background color for the page */
 }
 
 .title-bar {
-    /* Add internal spacing and a background color */
-    padding: 15px 50px;
-    background-color: #222;
+    /* Set the background color and text color for the bar */
+    background-color: #333;
     color: #fff;
-    text-align: center;
     
-    /* Make the corners rounded */
-    border-radius: 30px;
-
-    /* Add margins to create the "island" effect */
-    margin: 0 20px; 
+    /* Add padding to create spacing inside the bar */
+    padding: 20px;
+    
+    /* Ensure the title bar spans the full width of the screen */
+    width: 100%;
+    
+    /* Align the text to the center */
+    text-align: center;
 }
 
-h1 {
-    /* Remove default margin on the heading */
+.title-bar h1 {
+    /* Remove the default margin on the heading */
     margin: 0;
-    font-size: 2.5rem;
-    color: #fff;
+    font-size: 1.8rem;
 }
