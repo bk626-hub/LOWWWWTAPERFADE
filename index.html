@@ -3,12 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Site</title>
+    <title>Dynamic Island Effect</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="title-bar">
-        <h1>My Simple Site</h1>
-    </header>
+    <div id="dynamic-island" class="island-collapsed">
+        <div class="island-content island-small">
+            <span class="icon">🎶</span>
+            <span class="text">Music Playing</span>
+        </div>
+        <div class="island-content island-large">
+            <div class="large-content-top">
+                <span class="icon">🎶</span>
+                <div class="track-info">
+                    <p class="track-title">Song Title</p>
+                    <p class="track-artist">Artist Name</p>
+                </div>
+                <div class="controls">
+                    <button>⏮️</button>
+                    <button>⏯️</button>
+                    <button>⏭️</button>
+                </div>
+            </div>
+            <div class="large-content-bottom">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
