@@ -1,41 +1,34 @@
 body {
-    /* Set a dark background for contrast and center content */
     background-color: #111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
+header {
+    /* Create space at the top of the page */
+    padding-top: 20px; 
+    /* Use flexbox to center the title bar horizontally */
+    display: flex;
+    justify-content: center;
+}
+
 .title-bar {
-    /* Style the main title bar */
+    /* Add internal spacing and a background color */
     padding: 15px 50px;
-    border-radius: 30px;
     background-color: #222;
-    text-align: center;
     color: #fff;
+    text-align: center;
     
-    /* Apply the animation to the box-shadow */
-    animation: neon-glow 1.5s infinite alternate;
+    /* Make the corners rounded */
+    border-radius: 30px;
+
+    /* Add margins to create the "island" effect */
+    margin: 0 20px; 
 }
 
 h1 {
+    /* Remove default margin on the heading */
     margin: 0;
     font-size: 2.5rem;
     color: #fff;
-    /* Animate the text glow along with the background glow */
-    text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
-}
-
-@keyframes neon-glow {
-    from {
-        /* Starting state of the glow */
-        box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
-    }
-    to {
-        /* Ending state of the glow (brighter and more spread) */
-        box-shadow: 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 60px #39ff14;
-    }
 }
