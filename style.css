@@ -24,7 +24,7 @@ body {
 
 /* Collapsed state (default) */
 .island-collapsed {
-    width: 200px;
+    width: 2000px;
     height: 40px;
     padding: 0 20px;
 }
