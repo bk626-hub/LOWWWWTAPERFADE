@@ -1,19 +1,41 @@
-/* ... (existing CSS code) ... */
-
-#loading-screen {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 24px;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    z-index: 10;
+body {
+    /* Set a dark background for contrast and center content */
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-#game-container {
-    position: relative; /* Add position relative for the loading screen */
-    /* ... (rest of the game-container styles) ... */
+.title-bar {
+    /* Style the main title bar */
+    padding: 15px 50px;
+    border-radius: 30px;
+    background-color: #222;
+    text-align: center;
+    color: #fff;
+    
+    /* Apply the animation to the box-shadow */
+    animation: neon-glow 1.5s infinite alternate;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #fff;
+    /* Animate the text glow along with the background glow */
+    text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+}
+
+@keyframes neon-glow {
+    from {
+        /* Starting state of the glow */
+        box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+    }
+    to {
+        /* Ending state of the glow (brighter and more spread) */
+        box-shadow: 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 60px #39ff14;
+    }
 }
